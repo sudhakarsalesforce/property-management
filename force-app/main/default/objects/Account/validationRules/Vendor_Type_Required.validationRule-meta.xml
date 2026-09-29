@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Type_Required</fullName>
+    <active>true</active>
+    <description>Vendor accounts must have a Vendor Type. Backs up the layout requirement for imports, API, and code.</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName =&quot;Vendor&quot;,
+ISPICKVAL(Vendor_Type__c, &quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>Vendor_Type__c</errorDisplayField>
+    <errorMessage>Please select a Vendor Type for this vendor.</errorMessage>
+</ValidationRule>
