@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Vendor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Marks vendors we call first for this type of work.</description>
+    <inlineHelpText>Check if this is a go-to vendor for its category.</inlineHelpText>
+    <label>Preferred Vendor</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

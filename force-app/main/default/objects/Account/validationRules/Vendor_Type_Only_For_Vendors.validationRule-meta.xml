@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vendor_Type_Only_For_Vendors</fullName>
+    <active>true</active>
+    <description>Vendor Type may only be set on Vendor accounts. Record types require at least one picklist value, so this rule blocks it everywhere else</description>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName &lt;&gt; &quot;Vendor&quot;,
+  NOT(ISPICKVAL(Vendor_Type__c, &quot;&quot;))
+)</errorConditionFormula>
+    <errorMessage>Vendor Type can only be set on Vendor accounts.</errorMessage>
+</ValidationRule>
