@@ -7,6 +7,12 @@
     <columns>City__c</columns>
     <columns>Equity__c</columns>
     <columns>Owner_Account__c</columns>
+    <columns>Total_Units__c</columns>
+    <columns>Occupied_Units__c</columns>
+    <columns>Vacant_Units__c</columns>
+    <columns>Occupancy_Rate__c</columns>
+    <columns>Potential_Monthly_Rent__c</columns>
+    <columns>Projected_Monthly_Cash_Flow__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Status__c</field>

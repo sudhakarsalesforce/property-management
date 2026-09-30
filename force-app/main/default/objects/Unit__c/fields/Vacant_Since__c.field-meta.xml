@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vacant_Since__c</fullName>
+    <inlineHelpText>Date the unit became empty. Required when Status is Vacant or Listed.</inlineHelpText>
+    <label>Vacant Since</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

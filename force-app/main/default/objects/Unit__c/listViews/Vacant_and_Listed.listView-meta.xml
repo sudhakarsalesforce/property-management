@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vacant_and_Listed</fullName>
+    <columns>NAME</columns>
+    <columns>Property__c</columns>
+    <columns>Status__c</columns>
+    <columns>Days_Vacant__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Bedrooms__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Vacant,Listed</value>
+    </filters>
+    <label>Vacant and Listed</label>
+</ListView>

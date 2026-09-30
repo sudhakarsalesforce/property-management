@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Occupied</fullName>
+    <columns>NAME</columns>
+    <columns>Bedrooms__c</columns>
+    <columns>Bathrooms__c</columns>
+    <columns>Market_Rent__c</columns>
+    <columns>Property__c</columns>
+    <columns>Vacant_Since__c</columns>
+    <columns>Days_Vacant__c</columns>
+    <columns>Unique_Key__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Occupied</value>
+    </filters>
+    <label>Occupied</label>
+</ListView>
