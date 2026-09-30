@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HOA_Fee_Needs_HOA</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Monthly_HOA__c &gt; 0,
+ISBLANK( HOA__c ))</errorConditionFormula>
+    <errorDisplayField>HOA__c</errorDisplayField>
+    <errorMessage>Select the HOA that charges these dues.</errorMessage>
+</ValidationRule>

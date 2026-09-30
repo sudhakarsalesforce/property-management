@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mortgage_Needs_Lender</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Monthly_Mortgage__c &gt; 0,
+ISBLANK( Mortgage_Lender__c ))</errorConditionFormula>
+    <errorDisplayField>Mortgage_Lender__c</errorDisplayField>
+    <errorMessage>Select the Mortgage Lender for this mortgage payment.</errorMessage>
+</ValidationRule>

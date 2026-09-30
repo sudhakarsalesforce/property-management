@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Property_Type__c</fullName>
+    <inlineHelpText>Type of building.</inlineHelpText>
+    <label>Property Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Single Family</fullName>
+                <default>false</default>
+                <label>Single Family</label>
+            </value>
+            <value>
+                <fullName>Townhouse</fullName>
+                <default>false</default>
+                <label>Townhouse</label>
+            </value>
+            <value>
+                <fullName>Condo</fullName>
+                <default>false</default>
+                <label>Condo</label>
+            </value>
+            <value>
+                <fullName>Duplex</fullName>
+                <default>false</default>
+                <label>Duplex</label>
+            </value>
+            <value>
+                <fullName>Triplex</fullName>
+                <default>false</default>
+                <label>Triplex</label>
+            </value>
+            <value>
+                <fullName>Fourplex</fullName>
+                <default>false</default>
+                <label>Fourplex</label>
+            </value>
+            <value>
+                <fullName>Multi-family</fullName>
+                <default>false</default>
+                <label>Multi-family</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
