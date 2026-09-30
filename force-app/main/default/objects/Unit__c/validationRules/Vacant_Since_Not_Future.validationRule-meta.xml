@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vacant_Since_Not_Future</fullName>
+    <active>true</active>
+    <errorConditionFormula>Vacant_Since__c  &gt;  TODAY()</errorConditionFormula>
+    <errorDisplayField>Vacant_Since__c</errorDisplayField>
+    <errorMessage>Vacant Since can&apos;t be in the future.</errorMessage>
+</ValidationRule>
