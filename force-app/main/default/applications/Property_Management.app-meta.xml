@@ -20,6 +20,8 @@
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <tabs>Property__c</tabs>
+    <tabs>Unit__c</tabs>
+    <tabs>standard-Asset</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Property_Management_UtilityBar</utilityBar>
 </CustomApplication>
