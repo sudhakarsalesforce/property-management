@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Warranty_After_Purchase</fullName>
+    <active>true</active>
+    <errorConditionFormula>Warranty_Expiration__c &lt; PurchaseDate</errorConditionFormula>
+    <errorDisplayField>Warranty_Expiration__c</errorDisplayField>
+    <errorMessage>Warranty can&apos;t expire before the purchase date</errorMessage>
+</ValidationRule>
