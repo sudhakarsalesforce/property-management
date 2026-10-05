@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Unit__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>Unit Status Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Market_Rent__c</fieldNames>
+        <fieldNames>Days_Vacant__c</fieldNames>
+        <fieldNames>Pets_Allowed__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 12.25px;&quot;&gt;Advertised and accepting inquiries. Respond to leads within 24 hours. If vacant more than 30 days, review the price.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Listed</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Market_Rent__c</fieldNames>
+        <fieldNames>Security_Deposit__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 12.25px;&quot;&gt;Tenant in place. In a later sprint, this status will be set automatically when a lease activates.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Occupied</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 12.25px;&quot;&gt;Intentionally not being rented, e.g. owner use or major renovation.&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Off Market</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Vacant_Since__c</fieldNames>
+        <info>&lt;table class=&quot;ql-table-blob&quot; style=&quot;margin: 24px 0px 0px; width: 946px; border-width: 1px; border-style: solid; border-color: rgb(221, 222, 225); font-size: 14px; height: 1px; color: rgb(41, 42, 46); font-style: normal; font-weight: 400; white-space: pre-wrap;&quot;&gt;&lt;tbody style=&quot;&quot;&gt;&lt;tr&gt;&lt;td colspan=&quot;1&quot; rowspan=&quot;1&quot; style=&quot;padding: 8px; border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(221, 222, 225); background-color: rgb(255, 255, 255);&quot;&gt;&lt;p style=&quot;&quot;&gt;&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</info>
+        <picklistValueName>Under Maintenance</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Vacant_Since__c</fieldNames>
+        <fieldNames>Market_Rent__c</fieldNames>
+        <fieldNames>Security_Deposit__c</fieldNames>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 12.25px;&quot;&gt;Unit is empty. Finish cleaning and make-ready repairs, confirm the rent price, then take photos and list it&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>Vacant</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

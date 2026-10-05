@@ -7,6 +7,7 @@
     <columns>Days_Vacant__c</columns>
     <columns>Market_Rent__c</columns>
     <columns>Bedrooms__c</columns>
+    <columns>Unique_Key__c</columns>
     <filterScope>Everything</filterScope>
     <filters>
         <field>Status__c</field>
