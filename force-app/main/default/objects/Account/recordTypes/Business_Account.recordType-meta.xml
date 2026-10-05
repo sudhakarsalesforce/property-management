@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Vendor</fullName>
+    <fullName>Business_Account</fullName>
     <active>true</active>
-    <description>Businesses we pay: HOAs, lenders, insurers, contractors, suppliers.</description>
-    <label>Vendor</label>
+    <label>Business Account</label>
     <picklistValues>
         <picklist>AccountSource</picklist>
         <values>
