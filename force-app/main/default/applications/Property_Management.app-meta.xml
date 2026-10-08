@@ -94,6 +94,7 @@
     <tabs>Property__c</tabs>
     <tabs>Unit__c</tabs>
     <tabs>standard-Asset</tabs>
+    <tabs>standard-Campaign</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Property_Management_UtilityBar</utilityBar>
 </CustomApplication>

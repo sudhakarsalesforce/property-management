@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel_Requires_Parent</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  RecordType.DeveloperName =&quot;Listing_Channel&quot;,
+  ISBLANK(ParentId)  
+)</errorConditionFormula>
+    <errorDisplayField>ParentId</errorDisplayField>
+    <errorMessage>A listing channel must belong to a Vacancy campaign. Select the Parent Campaign.</errorMessage>
+</ValidationRule>

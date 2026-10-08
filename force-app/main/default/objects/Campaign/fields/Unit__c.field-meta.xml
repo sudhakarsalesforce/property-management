@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Unit__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <inlineHelpText>The unit this vacancy campaign is advertising. Set on the parent Vacancy campaign.</inlineHelpText>
+    <label>Unit</label>
+    <referenceTo>Unit__c</referenceTo>
+    <relationshipLabel>Vacancy Campaigns</relationshipLabel>
+    <relationshipName>Campaigns</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>
