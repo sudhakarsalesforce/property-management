@@ -1,0 +1,59 @@
+[1m68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO[22m
+Execute Anonymous: // Lists Oakridge Main, reports what the flow created, then undoes everything.
+Execute Anonymous: Savepoint sp = [94mDatabase.setSavepoint[39m();
+Execute Anonymous: 
+Execute Anonymous: Unit__c u = [SELECT Id FROM Unit__c WHERE Name = 'Main' AND [94mProperty__r.Name[39m = 'Oakridge Townhome' LIMIT [94m1[39m];
+Execute Anonymous: [94mu.Status__c[39m = 'Listed';
+Execute Anonymous: [94mu.Vacant_Since__c[39m = [94mDate.today[39m().addDays(-[94m5[39m);
+Execute Anonymous: update u;
+Execute Anonymous: 
+Execute Anonymous: List<Campaign> created = [
+Execute Anonymous:     SELECT Name, [94mRecordType.DeveloperName[39m, Channel__c,
+Execute Anonymous:            (SELECT Label, IsDefault FROM CampaignMemberStatuses ORDER BY SortOrder)
+Execute Anonymous:     FROM Campaign
+Execute Anonymous:     WHERE Unit__c = :[94mu.Id[39m OR [94mParent.Unit__c[39m = :[94mu.Id[39m
+Execute Anonymous: ];
+Execute Anonymous: for (Campaign c : created) {
+Execute Anonymous:     List<String> labels = new List<String>();
+Execute Anonymous:     for (CampaignMemberStatus s : [94mc.CampaignMemberStatuses[39m) {
+Execute Anonymous:         [94mlabels.add[39m([94ms.Label[39m + ([94ms.IsDefault[39m ? ' (default)' : ''));
+Execute Anonymous:     }
+Execute Anonymous:     [94mSystem.debug[39m([94mc.RecordType.DeveloperName[39m + ' | ' + [94mc.Name[39m + ' | statuses: ' + [94mString.join[39m(labels, ', '));
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: [94mDatabase.rollback[39m(sp);
+Execute Anonymous: [94mSystem.debug[39m('Rolled back. Nothing was saved.');
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m42475741[39m)[1m[32m|USER_INFO|[39m[22m[EXTERNAL]|005fj00000KJl4X|sudhakarsalesforce26@[94magentforce.com[39m|(GMT-[94m07[39m:[94m00[39m) Pacific Daylight Time (America/Los_Angeles)|GMT-[94m07[39m:[94m00[39m
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m42632283[39m)|EXECUTION_STARTED
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m42660243[39m)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m79713996[39m)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:01Ifj00000BAGtB
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m116160683[39m)|CODE_UNIT_FINISHED|Flow:01Ifj00000BAGtB
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m123207320[39m)|CODE_UNIT_STARTED|[EXTERNAL]|Validation:Unit:a01fj000021iAQO
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m123456672[39m)|CODE_UNIT_FINISHED|Validation:Unit:a01fj000021iAQO
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m136951459[39m)|CODE_UNIT_STARTED|[EXTERNAL]|Flow:01Ifj00000BAGtB
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m510276540[39m)|CODE_UNIT_FINISHED|Flow:01Ifj00000BAGtB
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m515056182[39m)|[1m[32mEXCEPTION_THROWN[39m[22m|[[94m7[39m]|[1m[[94m31mSystem.DmlException[39m[39m[22m: Update failed. First exception on row [94m0[39m with id a01fj000021iAQOAA2; first error: FIELD_CUSTOM_VALIDATION_EXCEPTION, Vacancy campaign failed. RecordTypeId: 012fj000008SA6HAAW &#[94m124[39m; Unit: a01fj000021iAQOAA2 &#[94m124[39m; Error: This error occurred when the flow tried to create records: INSUFFICIENT_ACCESS_ON_CROSS_REFERENCE_ENTITY: insufficient access rights on cross-reference id. You can look up ExceptionCode values in the <a href='https://[94mdeveloper.salesforce.com[39m/docs/[94matlas.en[39m-[94mus.api.meta[39m/api/[94msforce_api_calls_concepts_core_data_objects.htm[39m#'>SOAP API Developer Guide</a>.: []
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m517594360[39m)|[1m[32mFATAL_ERROR[39m[22m|[1m[[94m31mSystem.DmlException[39m[39m[22m: Update failed. First exception on row [94m0[39m with id a01fj000021iAQOAA2; first error: FIELD_CUSTOM_VALIDATION_EXCEPTION, Vacancy campaign failed. RecordTypeId: 012fj000008SA6HAAW &#[94m124[39m; Unit: a01fj000021iAQOAA2 &#[94m124[39m; Error: This error occurred when the flow tried to create records: INSUFFICIENT_ACCESS_ON_CROSS_REFERENCE_ENTITY: insufficient access rights on cross-reference id. You can look up ExceptionCode values in the <a href='https://[94mdeveloper.salesforce.com[39m/docs/[94matlas.en[39m-[94mus.api.meta[39m/api/[94msforce_api_calls_concepts_core_data_objects.htm[39m#'>SOAP API Developer Guide</a>.: []
+
+AnonymousBlock: line [94m7[39m, column [94m1[39m
+[94m13[39m:[94m28[39m:[94m40[39m.[94m517[39m ([94m517614200[39m)|CUMULATIVE_LIMIT_USAGE
+[94m13[39m:[94m28[39m:[94m40[39m.[94m517[39m ([94m517614200[39m)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: [94m1[39m out of [94m100[39m
+  Number of query rows: [94m1[39m out of [94m50000[39m
+  Number of SOSL queries: [94m0[39m out of [94m20[39m
+  Number of DML statements: [94m2[39m out of [94m150[39m
+  Number of Publish Immediate DML: [94m0[39m out of [94m150[39m
+  Number of DML rows: [94m1[39m out of [94m10000[39m
+  Maximum CPU time: [94m0[39m out of [94m10000[39m
+  Maximum heap size: [94m0[39m out of [94m10000000[39m
+  Number of callouts: [94m0[39m out of [94m100[39m
+  Number of Email Invocations: [94m0[39m out of [94m10[39m
+  Number of future calls: [94m0[39m out of [94m50[39m
+  Number of queueable jobs added to the queue: [94m0[39m out of [94m50[39m
+  Number of Mobile Apex push calls: [94m0[39m out of [94m10[39m
+
+[94m13[39m:[94m28[39m:[94m40[39m.[94m517[39m ([94m517614200[39m)|CUMULATIVE_LIMIT_USAGE_END
+
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m517743851[39m)|CODE_UNIT_FINISHED|execute_anonymous_apex
+[94m13[39m:[94m28[39m:[94m40[39m.[94m42[39m ([94m517753681[39m)|EXECUTION_FINISHED
+
