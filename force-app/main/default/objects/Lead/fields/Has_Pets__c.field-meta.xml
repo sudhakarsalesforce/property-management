@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Pets__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Checked if the prospect has pets.</inlineHelpText>
+    <label>Has Pets</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
